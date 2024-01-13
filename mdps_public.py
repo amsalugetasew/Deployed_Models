@@ -18,7 +18,7 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Multiple  Prediction System',
+    selected = option_menu('My Models List',
                           
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
