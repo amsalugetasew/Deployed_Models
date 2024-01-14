@@ -31,35 +31,35 @@ with st.sidebar:
 if (selected == 'CyberSecurity_LR'):
     
     # page title
-    st.title('Diabetes Prediction using ML')
+    st.title('CyberSecurity Logistic Regration using ML')
     
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        Pregnancies = st.text_input('Number of Pregnancies')
+        Gender = st.text_input('Gender')
         
     with col2:
-        Glucose = st.text_input('Glucose Level')
+        Education = st.text_input('Education')
     
     with col3:
-        BloodPressure = st.text_input('Blood Pressure value')
+        Field = st.text_input(Field')
     
     with col1:
-        SkinThickness = st.text_input('Skin Thickness value')
+        Computer_Category = st.text_input('Computer_Category')
     
     with col2:
-        Insulin = st.text_input('Insulin Level')
+        Device_Used = st.text_input('Device_Used')
     
     with col3:
-        BMI = st.text_input('BMI value')
+        Connectivity_Used = st.text_input('Connectivity_Used')
     
     with col1:
-        DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
+        Purpose = st.text_input('Purpose')
     
     with col2:
-        Age = st.text_input('Age of the Person')
+        Age = st.text_input('Age')
     
     
     # code for Prediction
