@@ -9,9 +9,9 @@ from streamlit_option_menu import option_menu
 
 CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
+# heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
-parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
+# parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 
 
@@ -29,7 +29,6 @@ with st.sidebar:
     
 # CyberSecurity Logistic Regration Prediction Page
 if (selected == 'CyberSecurity_LR'):
-    
     # page title
     st.title('CyberSecurity Logistic Regration using ML')
     
@@ -63,19 +62,19 @@ if (selected == 'CyberSecurity_LR'):
     
     
     # code for Prediction
-    diab_diagnosis = ''
+    CyberSecurity_LR_result = ''
     
-    # creating a button for Prediction
+    creating a button for Prediction
     
-    if st.button('Diabetes Test Result'):
-        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+    if st.button('CyberSecurity Test Result'):
+        CyberSecurity_LR_prediction = LogisticRegration.predict([[Gender, Education, Field, Computer_Category, Device_Used, Connectivity_Used, Purpose, Age]])
         
-        if (diab_prediction[0] == 1):
-          diab_diagnosis = 'The person is diabetic'
+        if (CyberSecurity_LR_prediction[0] == 1):
+          CyberSecurity_LR_result = 'The person is +ve'
         else:
-          diab_diagnosis = 'The person is not diabetic'
+          CyberSecurity_LR_result = 'The person is -ve'
         
-    st.success(diab_diagnosis)
+    st.success(CyberSecurity_LR_result)
 
 
 
