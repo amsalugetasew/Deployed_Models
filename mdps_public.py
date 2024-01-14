@@ -27,8 +27,8 @@ with st.sidebar:
                           default_index=0)
     
     
-# Diabetes Prediction Page
-if (selected == 'Diabetes Prediction'):
+# CyberSecurity Logistic Regration Prediction Page
+if (selected == 'CyberSecurity_LR'):
     
     # page title
     st.title('Diabetes Prediction using ML')
