@@ -64,7 +64,7 @@ if (selected == 'CyberSecurity_LR'):
     # code for Prediction
     CyberSecurity_LR_result = ''
     
-    creating a button for Prediction
+    # creating a button for Prediction
     
     if st.button('CyberSecurity Test Result'):
         CyberSecurity_LR_prediction = LogisticRegration.predict([[Gender, Education, Field, Computer_Category, Device_Used, Connectivity_Used, Purpose, Age]])
