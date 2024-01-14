@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+CyberSecurity_LR = pickle.load(open('LogisticRegration.sav.sav', 'rb'))
 
 heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
@@ -20,7 +20,7 @@ with st.sidebar:
     
     selected = option_menu('My Models List',
                           
-                          ['Diabetes Prediction',
+                          ['Cyber Security Factors using Logistic Regration',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
                           icons=['activity','heart','person'],
