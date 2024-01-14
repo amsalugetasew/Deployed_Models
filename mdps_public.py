@@ -44,7 +44,7 @@ if (selected == 'CyberSecurity_LR'):
         Education = st.text_input('Education')
     
     with col3:
-        Field = st.text_input(Field')
+        Field = st.text_input('Field')
     
     with col1:
         Computer_Category = st.text_input('Computer_Category')
