@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-CyberSecurity_LR = pickle.load(open('LogisticRegration.sav.sav', 'rb'))
+CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
 heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
