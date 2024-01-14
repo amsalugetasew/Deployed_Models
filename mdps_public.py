@@ -28,7 +28,7 @@ with st.sidebar:
     
     
 # CyberSecurity Logistic Regration Prediction Page
-if (selected == 'CyberSecurity_LR'):
+if (selected == 'Cyber Security Factors using Logistic Regration'):
     # page title
     st.title('CyberSecurity Logistic Regration using ML')
     
