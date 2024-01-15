@@ -26,40 +26,37 @@ with st.sidebar:
                            'Bank Note Prediction',
                            'ANN based Bank Note Prediction',
                            'Placement Prediction'
+    # CyberSecurity Logistic Regration Prediction Page
+    if (selected == 'Cyber Security Factors using Logistic Regration'):
+        st.title('CyberSecurity Logistic Regration using ML')
     
     
-# CyberSecurity Logistic Regration Prediction Page
-if (selected == 'Cyber Security Factors using Logistic Regration'):
-    # page title
-    st.title('CyberSecurity Logistic Regration using ML')
+        # getting the input data from the user
+        col1, col2, col3 = st.columns(3)
     
-    
-    # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        Gender = st.text_input('Gender')
+        with col1:
+            Gender = st.text_input('Gender')
         
-    with col2:
-        Education = st.text_input('Education')
+        with col2:
+            Education = st.text_input('Education')
     
-    with col3:
-        Field = st.text_input('Field')
+        with col3:
+            Field = st.text_input('Field')
     
-    with col1:
-        Computer_Category = st.text_input('Computer_Category')
+        with col1:
+            Computer_Category = st.text_input('Computer_Category')
     
-    with col2:
-        Device_Used = st.text_input('Device_Used')
+        with col2:
+            Device_Used = st.text_input('Device_Used')
     
-    with col3:
-        Connectivity_Used = st.text_input('Connectivity_Used')
+        with col3:
+            Connectivity_Used = st.text_input('Connectivity_Used')
     
-    with col1:
-        Purpose = st.text_input('Purpose')
+        with col1:
+            Purpose = st.text_input('Purpose')
     
-    with col2:
-        Age = st.text_input('Age')
+        with col2:
+            Age = st.text_input('Age')
     
     
     # code for Prediction
