@@ -14,7 +14,7 @@ salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-
+['with NN']
 
 # sidebar for navigation
 with st.sidebar:
