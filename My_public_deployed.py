@@ -26,9 +26,8 @@ with st.sidebar:
                            'Bank Note Prediction',
                            'ANN based Bank Note Prediction',
                            'Placement Prediction']
-    # CyberSecurity Logistic Regration Prediction Page
     if (selected == 'Cyber Security Factors using Logistic Regration'):
-                           st.title('CyberSecurity Logistic Regration using ML')
+        st.title('CyberSecurity Logistic Regration using ML')
     
     
         # getting the input data from the user
