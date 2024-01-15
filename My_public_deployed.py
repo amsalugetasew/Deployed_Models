@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
 bank_prediction = pickle.load(open('classifier.pkl', 'rb'))
-placement_prediction = pickle.load(open('linear_regression.pkl', 'rb'))
+# placement_prediction = pickle.load(open('linear_regression.pkl', 'rb'))
 # salary_prediction = pickle.load(open('classifierlr.h5', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
@@ -239,37 +239,37 @@ if (selected == "Parkinsons Prediction"):
         
     st.success(parkinsons_diagnosis)
 
-  # Placement Prediction Page
-if (selected == 'placement_prediction'):
-    # page title
-    st.title('Placement Regression using ML')
+#   # Placement Prediction Page
+# if (selected == 'placement_prediction'):
+#     # page title
+#     st.title('Placement Regression using ML')
     
     
-    # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
+#     # getting the input data from the user
+#     col1, col2, col3 = st.columns(3)
     
-    with col1:
-        cgpa = st.text_input('CGPA')
+#     with col1:
+#         cgpa = st.text_input('CGPA')
         
-    with col2:
-        iq = st.text_input('IQ')
+#     with col2:
+#         iq = st.text_input('IQ')
     
     
     
         
-    # code for Prediction
-    placement = ''
-    # Bank Note Prediction
-    # creating a button for Prediction    
-    if st.button("Placement Test Result"):
-        placement_prediction = bank_prediction.predict([[cgpa, id]])                          
+#     # code for Prediction
+#     placement = ''
+#     # Bank Note Prediction
+#     # creating a button for Prediction    
+#     if st.button("Placement Test Result"):
+#         placement_prediction = bank_prediction.predict([[cgpa, id]])                          
         
-        if (placement_prediction[0] == 1):
-          placement = "Not Placed or Negative"
-        else:
-          placement = "Placed or Positive"
+#         if (placement_prediction[0] == 1):
+#           placement = "Not Placed or Negative"
+#         else:
+#           placement = "Placed or Positive"
         
-    st.success(placement)
+#     st.success(placement)
 
 # Bank Note Authentication Prediction Page
 if (selected == 'Bank Note Prediction'):
