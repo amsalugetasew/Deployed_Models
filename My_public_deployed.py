@@ -131,7 +131,7 @@ if (selected == 'Data Scientist Salary Prediction'):
     # creating a button for Prediction
     
     if st.button('Salary prediction Test Result'):
-        salary_predictions = salary_prediction.predict([[work_year, experience_level, employment_type, job_title,employee_residence, remote_ratio,company_location,company_size, salary_currency, salary_in_usd]])                          
+        salary_predictions = salary_prediction.predict([[work_year, experience_level, employment_type, job_title,employee_residence, remote_ratio, company_location,company_size, salary_currency, salary_in_usd]])                          
         
         if (salary_predictions[0] == 1):
           Data_Scientist_Salary_prediction = 'Salary'
