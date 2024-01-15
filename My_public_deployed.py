@@ -268,9 +268,9 @@ if (selected == 'Bank Note Prediction'):
         bank_notes_prediction = bank_prediction.predict([[variance, skewness,curtosis,entropy]])                          
         
         if (bank_notes_prediction[0] == 1):
-          Bank_Note_Auth = "The person has Parkinson's disease"
+          Bank_Note_Auth = 0
         else:
-          Bank_Note_Auth = "The person does not have Parkinson's disease"
+          Bank_Note_Auth = 1
         
     st.success(Bank_Note_Auth)
 
