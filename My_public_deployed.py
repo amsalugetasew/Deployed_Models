@@ -15,7 +15,24 @@ bank_prediction_ANN = pickle.load(open('classifier.pkl', 'rb'))
 # salary_prediction = pickle.load(open('classifierlr.h5', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
-
+# # sidebar for navigation
+# with st.sidebar:
+    
+#     selected = option_menu('Multiple Prediction System',
+                          
+#                           ['Diabetes Prediction',
+#                            'Heart Disease Prediction',
+#                            'Parkinsons Prediction',
+#                           'Loan Repayment Prediction'],
+#                           icons=['activity','heart','person','bank'],
+#                           default_index=0)
+    
+    
+# # Diabetes Prediction Page
+# if (selected == 'Diabetes Prediction'):
+    
+#     # page title
+#     st.title('Diabetes Prediction using ML')
 # sidebar for navigation
 with st.sidebar:
     
@@ -25,7 +42,8 @@ with st.sidebar:
                            'Data Scientist Salary Prediction',
                            'Bank Note Prediction',
                            'ANN based Bank Note Prediction',
-                           'Placement Prediction']
+                           'Placement Prediction'],
+                           default_index=0)
 if (selected == 'Cyber Security Factors using Logistic Regration'):
     st.title('CyberSecurity Logistic Regration using ML')
     
