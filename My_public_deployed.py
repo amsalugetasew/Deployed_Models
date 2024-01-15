@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
 bank_prediction = pickle.load(open('classifier.pkl', 'rb'))
-bank_prediction_ANN = pickle.load(open('classifierANN.sav', 'rb'))
+bank_prediction_ANN = pickle.load(open('classifierANN.pkl', 'rb'))
 # placement_prediction = pickle.load(open('linear_regression.pkl', 'rb'))
 # salary_prediction = pickle.load(open('classifierlr.h5', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
