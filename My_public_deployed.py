@@ -137,8 +137,7 @@ if (selected == 'Data Scientist Salary Prediction'):
 # st.text('')
 # if st.button("Predict type of Iris"):
 #     result = predict(
-#         np.array([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, 
-                                                         company_location, company_size, salary_currency, salary_in_usd]]))
+#         np.array([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, company_location, company_size, salary_currency, salary_in_usd]]))
 #     st.text(result[0])
 
 
