@@ -25,9 +25,7 @@ with st.sidebar:
                            'Data Scientist Salary Prediction',
                            'Bank Note Prediction',
                            'ANN based Bank Note Prediction',
-                           'Placement Prediction',
-                          icons=['activity','heart','person'],
-                          default_index=0)
+                           'Placement Prediction'
     
     
 # CyberSecurity Logistic Regration Prediction Page
