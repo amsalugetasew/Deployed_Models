@@ -15,24 +15,7 @@ bank_prediction_ANN = pickle.load(open('classifier.pkl', 'rb'))
 # salary_prediction = pickle.load(open('classifierlr.h5', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
-# # sidebar for navigation
-# with st.sidebar:
-    
-#     selected = option_menu('Multiple Prediction System',
-                          
-#                           ['Diabetes Prediction',
-#                            'Heart Disease Prediction',
-#                            'Parkinsons Prediction',
-#                           'Loan Repayment Prediction'],
-#                           icons=['activity','heart','person','bank'],
-#                           default_index=0)
-    
-    
-# # Diabetes Prediction Page
-# if (selected == 'Diabetes Prediction'):
-    
-#     # page title
-#     st.title('Diabetes Prediction using ML')
+
 # sidebar for navigation
 with st.sidebar:
     
@@ -46,34 +29,32 @@ with st.sidebar:
                            default_index=0)
 if (selected == 'Cyber Security Factors using Logistic Regration'):
     st.title('CyberSecurity Logistic Regration using ML')
+    # getting the input data from the user
+    col1, col2, col3 = st.columns(3)
     
-    
-        # getting the input data from the user
-        col1, col2, col3 = st.columns(3)
-    
-        with col1:
-            Gender = st.text_input('Gender')
+    with col1:
+        Gender = st.text_input('Gender')
         
-        with col2:
-            Education = st.text_input('Education')
+    with col2:
+        Education = st.text_input('Education')
     
-        with col3:
-            Field = st.text_input('Field')
+    with col3:
+        Field = st.text_input('Field')
     
-        with col1:
-            Computer_Category = st.text_input('Computer_Category')
+    with col1:
+        Computer_Category = st.text_input('Computer_Category')
     
-        with col2:
-            Device_Used = st.text_input('Device_Used')
+    with col2:
+        Device_Used = st.text_input('Device_Used')
     
-        with col3:
-            Connectivity_Used = st.text_input('Connectivity_Used')
+    with col3:
+        Connectivity_Used = st.text_input('Connectivity_Used')
     
-        with col1:
-            Purpose = st.text_input('Purpose')
+    with col1:
+        Purpose = st.text_input('Purpose')
     
-        with col2:
-            Age = st.text_input('Age')
+    with col2:
+        Age = st.text_input('Age')
     
     
     # code for Prediction
