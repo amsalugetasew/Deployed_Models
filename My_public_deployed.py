@@ -124,25 +124,24 @@ if (selected == 'Data Scientist Salary Prediction'):
     
     # creating a button for Prediction
     
-    if st.button('Salary prediction Test Result'):
-        salary_predictions = salary_prediction.predict([[work_year, experience_level, employment_type, job_title,employee_residence, remote_ratio,company_location,company_size, salary_currency, salary_in_usd]])                          
+    # if st.button('Salary prediction Test Result'):
+    #     salary_predictions = salary_prediction.predict([[work_year, experience_level, employment_type, job_title,employee_residence, remote_ratio,company_location,company_size, salary_currency, salary_in_usd]])                          
         
-        if (salary_predictions[0] == 1):
-          Data_Scientist_Salary_prediction = 'Salary'
-        else:
-          Data_Scientist_Salary_prediction = 'Their is something wrong'
+    #     if (salary_predictions[0] == 1):
+    #       Data_Scientist_Salary_prediction = 'Salary'
+    #     else:
+    #       Data_Scientist_Salary_prediction = 'Their is something wrong'
         
-    st.success(Data_Scientist_Salary_prediction)
+    # st.success(Data_Scientist_Salary_prediction)
         
-# st.text('')
-# if st.button("Predict type of Iris"):
-#     result = predict(
-#         np.array([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, company_location, company_size, salary_currency, salary_in_usd]]))
-#     st.text(result[0])
+st.text('')
+if st.button("Predict type of Iris"):
+    result = salary_prediction.predict(np.array([[work_year, experience_level, employment_type, job_title,employee_residence, remote_ratio,company_location,company_size, salary_currency, salary_in_usd]]))
+    st.text(result[0])
 
 
-# st.text('')
-# st.text('')    
+st.text('')
+st.text('')    
     
 
 # Parkinson's Prediction Page
