@@ -25,7 +25,7 @@ with st.sidebar:
                            'Data Scientist Salary Prediction',
                            'Bank Note Prediction',
                            'ANN based Bank Note Prediction',
-                           'Placement Prediction'
+                           'Placement Prediction']
     # CyberSecurity Logistic Regration Prediction Page
     if (selected == 'Cyber Security Factors using Logistic Regration'):
         st.title('CyberSecurity Logistic Regration using ML')
