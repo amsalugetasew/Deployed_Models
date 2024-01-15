@@ -125,10 +125,11 @@ if (selected == 'Data Scientist Salary Prediction'):
     # creating a button for Prediction
     
     if st.button('Salary prediction Test Result'):
-        salary_predictions = salary_prediction.predict([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, company_location, company_size, salary_currency, salary_in_usd]])                          
+        salary_predictions = salary_prediction.predict([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, 
+                                                         company_location, company_size, salary_currency, salary_in_usd]])                          
         
         if (salary_predictions[0] == 1):
-          Data_Scientist_Salary_prediction = salary
+          Data_Scientist_Salary_prediction = 'Salary'
         else:
           Data_Scientist_Salary_prediction = 'Their is something wrong'
         
@@ -218,7 +219,8 @@ if (selected == "Parkinsons Prediction"):
     
     # creating a button for Prediction    
     if st.button("Parkinson's Test Result"):
-        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
+        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,
+                                                           APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"
