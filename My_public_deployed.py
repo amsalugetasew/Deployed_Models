@@ -342,7 +342,6 @@ if (selected == 'Bank Note Prediction'):
           Bank_Note_Auth = "Counterfeit or Negative"
         else:
           Bank_Note_Auth = "Authentic or Positive"
-        
     st.success(Bank_Note_Auth)
 
 
