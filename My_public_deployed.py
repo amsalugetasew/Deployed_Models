@@ -11,6 +11,7 @@ CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
 # salary_prediction = pickle.load(open('LR.sav', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
+Bank_Note_Aut_model = pickle.load(open('classifier.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
@@ -23,6 +24,7 @@ with st.sidebar:
                           
                           ['Cyber Security Factors using Logistic Regration',
                            'Data Scientist Salary Prediction',
+                           'Bank Note Prediction',
                            'Parkinsons Prediction'],
                           icons=['activity','heart','person'],
                           default_index=0)
@@ -235,6 +237,22 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+
+
+    
+    # code for Prediction
+    Bank_Note_Auth = ''
+    # Bank Note Prediction
+    # creating a button for Prediction    
+    if st.button("Abank Note Auth's Test Result"):
+        bank_notes_prediction = Bank_Note_Aut_model.predict([[variance, skewness,curtosis,entropy]])                          
+        
+        if (bank_notes_prediction[0] == 1):
+          Bank_Note_Auth = "The person has Parkinson's disease"
+        else:
+          Bank_Note_Auth = "The person does not have Parkinson's disease"
+        
+    st.success(Bank_Note_Auth)
 
 
 
