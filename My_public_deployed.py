@@ -9,7 +9,7 @@ from streamlit_option_menu import option_menu
 
 CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
-# heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
+# heart_disease_model = pickle.load(open('salary_prediction.sav', 'rb'))
 
 # parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
@@ -21,7 +21,7 @@ with st.sidebar:
     selected = option_menu('My Models List',
                           
                           ['Cyber Security Factors using Logistic Regration',
-                           'Heart Disease Prediction',
+                           'Data Scientist Salary Prediction',
                            'Parkinsons Prediction'],
                           icons=['activity','heart','person'],
                           default_index=0)
@@ -79,70 +79,60 @@ if (selected == 'Cyber Security Factors using Logistic Regration'):
 
 
 
-# Heart Disease Prediction Page
-if (selected == 'Heart Disease Prediction'):
+# Data Scientist Salary Prediction Page
+if (selected == 'Data Scientist Salary Prediction'):
     
     # page title
-    st.title('Heart Disease Prediction using ML')
+    st.title('Data Scientist Salary Prediction using Linear Regression ML')
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        age = st.text_input('Age')
+        work_year = st.text_input('work_year')
         
     with col2:
-        sex = st.text_input('Sex')
+        experience_level = st.text_input('experience_level')
         
     with col3:
-        cp = st.text_input('Chest Pain types')
+        employment_type = st.text_input('Employment type')
         
     with col1:
-        trestbps = st.text_input('Resting Blood Pressure')
+        job_title = st.text_input('job_title')
         
     with col2:
-        chol = st.text_input('Serum Cholestoral in mg/dl')
+        employee_residence = st.text_input('employee_residence')
         
     with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+        remote_ratio = st.text_input('remote_ratio')
         
     with col1:
-        restecg = st.text_input('Resting Electrocardiographic results')
+        company_location = st.text_input('company_location')
         
     with col2:
-        thalach = st.text_input('Maximum Heart Rate achieved')
+        company_size = st.text_input('company_size')
         
     with col3:
-        exang = st.text_input('Exercise Induced Angina')
+        salary_currency = st.text_input('salary_currency')
         
     with col1:
-        oldpeak = st.text_input('ST depression induced by exercise')
+        salary_in_usd = st.text_input('salary_in_usd')
         
-    with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment')
-        
-    with col3:
-        ca = st.text_input('Major vessels colored by flourosopy')
-        
-    with col1:
-        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
-        
-        
-     
+            
      
     # code for Prediction
-    heart_diagnosis = ''
+    Data_Scientist_Salary_prediction = ''
     
     # creating a button for Prediction
     
-    if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
+    if st.button('Salary prediction Test Result'):
+        salary_prediction = salary_prediction.predict([[work_year,experience_level, employment_type, job_title, employee_residence, remote_ratio, company_location, company_size, salary_currency, salary_in_usd]])                          
         
-        if (heart_prediction[0] == 1):
-          heart_diagnosis = 'The person is having heart disease'
+        if (salary_prediction[0] == 1):
+          Data_Scientist_Salary_prediction = salary
         else:
-          heart_diagnosis = 'The person does not have any heart disease'
+          Data_Scientist_Salary_prediction = 'Their is something wrong'
         
-    st.success(heart_diagnosis)
+    st.success(Data_Scientist_Salary_prediction)
         
     
     
