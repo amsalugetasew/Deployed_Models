@@ -274,6 +274,42 @@ if (selected == "Parkinsons Prediction"):
 #     st.success(placement)
 
 # Bank Note Authentication Prediction Page
+if (selected == 'Bank Note Prediction'):
+    # page title
+    st.title('Bank Note Authentication Regression using ML')
+    
+    
+    # getting the input data from the user
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        variance = st.text_input('variance')
+        
+    with col2:
+        skewness = st.text_input('skewness')
+    
+    with col3:
+        curtosis = st.text_input('curtosis')
+    
+    with col1:
+        entropy = st.text_input('entropy')
+    
+        
+    # code for Prediction
+    Bank_Note_Auth = ''
+    # Bank Note Prediction
+    # creating a button for Prediction    
+    if st.button("Abank Note Auth's Test Result"):
+        bank_notes_prediction = bank_prediction.predict([[variance, skewness,curtosis,entropy]])                          
+        
+        if (bank_notes_prediction[0] == 1):
+          Bank_Note_Auth = "Counterfeit or Negative"
+        else:
+          Bank_Note_Auth = "Authentic or Positive"
+        
+    st.success(Bank_Note_Auth)
+    
+# Bank Note Authentication Prediction Page
 if (selected == 'ANN based Bank Note Prediction'):
     # page title
     st.title('Bank Note Authentication Regression using ML')
