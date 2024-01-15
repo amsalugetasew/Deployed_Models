@@ -21,10 +21,10 @@ with st.sidebar:
     
     selected = option_menu('My Models List',
                           
-                          ['Cyber Security Factors using Logistic Regration',
-                           'Data Scientist Salary Prediction',
-                           'Bank Note Prediction',
+                          ['Bank Note Prediction',
                            'ANN based Bank Note Prediction',
+                           'Cyber Security Factors using Logistic Regration',
+                           'Data Scientist Salary Prediction',                        
                            'Placement Prediction'],
                            default_index=0)
 if (selected == 'Cyber Security Factors using Logistic Regration'):
