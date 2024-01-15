@@ -15,7 +15,6 @@ salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-['with NN']
 
 # sidebar for navigation
 with st.sidebar:
@@ -239,7 +238,28 @@ if (selected == "Parkinsons Prediction"):
     st.success(parkinsons_diagnosis)
 
 
+    # CyberSecurity Logistic Regration Prediction Page
+if (selected == 'Bank Note Prediction'):
+    # page title
+    st.title('Bank Note Authentication Regression using ML')
     
+    
+    # getting the input data from the user
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        variance = st.text_input('variance')
+        
+    with col2:
+        skewness = st.text_input('skewness')
+    
+    with col3:
+        curtosis = st.text_input('curtosis')
+    
+    with col1:
+        entropy = st.text_input('entropy')
+    
+        
     # code for Prediction
     Bank_Note_Auth = ''
     # Bank Note Prediction
