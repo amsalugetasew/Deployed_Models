@@ -22,7 +22,7 @@ with st.sidebar:
     selected = option_menu('My Models List',
                           
                           ['Bank Note Prediction',
-                           'ANN based Bank Note Prediction',
+                           'Decision Tree based Bank Note Prediction',
                            'Cyber Security Factors using Logistic Regration',
                            'Data Scientist Salary Prediction',                        
                            'Placement Prediction'],
