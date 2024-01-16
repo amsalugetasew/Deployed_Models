@@ -168,7 +168,7 @@ if (selected == 'Bank Note Prediction'):
 # Bank Note Authentication Prediction Page
 if (selected == 'Decision Tree based Bank Note Prediction'):
     # page title
-    st.title('Bank Note Authentication using ANN')
+    st.title('Bank Note Authentication using Decision Tree')
     
     
     # getting the input data from the user
