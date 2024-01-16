@@ -166,7 +166,7 @@ if (selected == 'Bank Note Prediction'):
     st.success(Bank_Note_Auth)
     
 # Bank Note Authentication Prediction Page
-if (selected == 'ANN based Bank Note Prediction'):
+if (selected == 'Decision Tree based Bank Note Prediction'):
     # page title
     st.title('Bank Note Authentication using ANN')
     
