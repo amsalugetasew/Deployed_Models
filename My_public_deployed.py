@@ -215,12 +215,14 @@ if (selected == 'Placement Prediction'):
 
     with col1:
         cgpa = st.slider("CGPA", min_value=0, max_value=8, value=0, step=1)
-    with col2:
-        iq = st.selectbox("IQ", ["0", "1"])
+    with col1:
+        iq = st.slider("IQ", min_value=0, max_value=400, value=0, step=1)
+    # with col2:
+    #     iq = st.selectbox("IQ", ["0", "1"])
 
     
-    with col2:
-        iq = st.text_input('iq')
+    # with col2:
+    #     iq = st.text_input('iq')
     
     # with col3:
     #     curtosis = st.text_input('curtosis')
