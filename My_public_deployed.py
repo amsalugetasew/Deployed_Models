@@ -211,6 +211,10 @@ if (selected == 'Placement Prediction'):
     with col1:
         cgpa = st.text_input('cgpa')
         
+    with col1:
+        iq = st.selectbox("IQ Points_Mean", ["0", "1"])
+
+    
     with col2:
         iq = st.text_input('iq')
     
