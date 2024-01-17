@@ -208,11 +208,15 @@ if (selected == 'Placement Prediction'):
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
     
-    with col1:
-        cgpa = st.text_input('cgpa')
+    # with col1:
+    #     cgpa = st.text_input('cgpa')
         
+    # Add a slider
+
     with col1:
-        iq = st.selectbox("IQ Points_Mean", ["0", "1"])
+        selected_value = st.slider("CGPA", min_value=0, max_value=8, value=50, step=0.5)
+    with col2:
+        iq = st.selectbox("IQ", ["0", "1"])
 
     
     with col2:
