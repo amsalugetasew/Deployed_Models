@@ -214,7 +214,7 @@ if (selected == 'Placement Prediction'):
     # Add a slider
 
     with col1:
-        selected_value = st.slider("CGPA", min_value=0, max_value=8, value=50, step=0.5)
+        cdpa = st.slider("CGPA", min_value=0, max_value=8, value=50, step=0.5)
     with col2:
         iq = st.selectbox("IQ", ["0", "1"])
 
