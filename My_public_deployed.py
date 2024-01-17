@@ -11,7 +11,7 @@ CyberSecurity_LR = pickle.load(open('LogisticRegration.sav', 'rb'))
 
 bank_prediction = pickle.load(open('classifier.pkl', 'rb'))
 bank_prediction_ANN = pickle.load(open('dtree.pkl', 'rb'))
-# placement_prediction = pickle.load(open('linear_regression.pkl', 'rb'))
+placement_prediction = pickle.load(open('PDT.pkl', 'rb'))
 # salary_prediction = pickle.load(open('classifierlr.h5', 'rb'))
 salary_prediction = pickle.load(open('salary_prediction.sav', 'rb'))
 
@@ -164,7 +164,6 @@ if (selected == 'Bank Note Prediction'):
           Bank_Note_Auth = "Authentic or Positive"
         
     st.success(Bank_Note_Auth)
-    
 # Bank Note Authentication Prediction Page
 if (selected == 'Decision Tree based Bank Note Prediction'):
     # page title
@@ -199,7 +198,42 @@ if (selected == 'Decision Tree based Bank Note Prediction'):
         else:
           Bank_Note_Auth = "Authentic or Positive"
         
-    st.success(Bank_Note_Auth)
+    st.success(Bank_Note_Auth)   
+# Student Placement Prediction Page
+if (selected == 'Placement Prediction'):
+    # page title
+    st.title('Student Placement using Decision Tree')
+    
+    
+    # getting the input data from the user
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        cgpa = st.text_input('cgpa')
+        
+    with col2:
+        iq = st.text_input('iq')
+    
+    # with col3:
+    #     curtosis = st.text_input('curtosis')
+    
+    # with col1:
+    #     entropy = st.text_input('entropy')
+    
+        
+    # code for Prediction
+    placement_prediction = ''
+    # Bank Note Prediction
+    # creating a button for Prediction    
+    if st.button("placment's Test Result"):
+        placement_predictions = placement_prediction.predict([[cgpa, iq]])                          
+        
+        if (placement_predictions[0] == 1):
+          placement_prediction = "Counterfeit or Negative"
+        else:
+          placement_prediction = "Authentic or Positive"
+        
+    st.success(placement_prediction)
 
 
 
