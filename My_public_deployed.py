@@ -171,7 +171,7 @@ if (selected == 'Decision Tree based Bank Note Prediction'):
     
     
     # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(2)
     
     with col1:
         variance = st.text_input('variance')
@@ -179,10 +179,10 @@ if (selected == 'Decision Tree based Bank Note Prediction'):
     with col2:
         skewness = st.text_input('skewness')
     
-    with col3:
+    with col1:
         curtosis = st.text_input('curtosis')
     
-    with col1:
+    with col2:
         entropy = st.text_input('entropy')
     
         
